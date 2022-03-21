@@ -1,0 +1,44 @@
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2% 20%;
+}
+.container-searchbar{
+    flex-direction: row;
+}
+.container-tags {
+    display: flex;
+}
+.bg-primary{
+    background: #E7E7E7;
+}
+.bg-blue{
+    background: #3282F7;
+}
+
+.loupe{
+    height: 70%;
+    margin: 5px;
+
+}
+
+.logo{
+    width: 40%;
+}
+
+.searchbar{
+    width: 100%;
+    height: 45px;
+    border: none;
+}
+.btn-search{
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+.tag-search{
+    height: 20px;
+    border: none;
+}
+
+/* Create "tagged" class */
