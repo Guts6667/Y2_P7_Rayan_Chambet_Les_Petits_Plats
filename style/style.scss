@@ -1,0 +1,131 @@
+// Variables colors
+
+$grey : #E7E7E7;
+$blue : #3282F7;
+$green : #68D9A4;
+$red : #ED6454;
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../font/Lato/Lato-Regular.ttf');
+}
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('../font/Lato/Lato-Bold.ttf');
+}
+
+*{
+    font-family: 'Lato', 'Courrier', 'sans-serif';
+}
+// Backgrounds
+.bg-grey{
+    background: $grey;
+}
+.bg-blue{
+    background: $blue;
+}
+.bg-green{
+    background: $green;
+}
+.bg-red{
+    background: $red;
+}
+
+.hidden{
+    display: none;
+}
+
+// Header
+
+header{
+    display: flex;
+    justify-content: center;
+    margin: 2% 20%;
+
+    .logo{
+        width: 40%;
+    }
+    
+}
+
+
+
+.container{
+    display: flex;
+    margin: 2% 15%;
+
+    // Main search bar
+    &__searchbar{
+        flex-direction: row;
+        border-radius: 5px;
+
+        .searchbar{
+            width: 100%;
+            height: 45px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+        // Search button
+        .btn-search{
+            height: 45px;
+            display: flex;
+            align-items: center;
+            border-radius: 0 5px 5px 0 ;
+
+            .search-icon{
+                height: 70%;
+                margin: 5px;
+            
+            }
+        }
+    }
+
+}
+
+
+.container__filter{
+    display: flex;
+    justify-items: flex-start;
+    margin: 2% 15%;   
+    color: white;
+}
+
+.component-filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 15%;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 2%;
+}
+
+
+.tag{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 37px;
+    width: 10%; 
+    border-radius: 5px;
+    font-size: 14px;
+
+}
+
+
+
+.tag-search{
+    height: 20px;
+    border: none;
+    
+}
+
+.visible{
+    display: block !important;
+}
+.hidden{
+    display: none !important;
+}
+
+
+/* Create "tagged" class */

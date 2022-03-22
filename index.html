@@ -10,25 +10,57 @@
 </head>
 <body>
     <header>
-        <div class="container">
             <img src="./assets/Logo.png" alt="Logo - Les petits plats" class="logo">
-        </div>
     </header>
     <nav>
-        <div class="container container-searchbar">
-            <input type="search" name="searchbar" id="searchbar" class="searchbar bg-primary">
-            <div class="bg-primary btn-search">
-                <img src="./assets/loupe.png" alt="Icone loupe" class="loupe">
+        <div class="container container__searchbar">
+            <input type="search" name="searchbar" id="searchbar" class="searchbar bg-grey">
+            <div class="bg-grey btn-search">
+                <img src="./assets/loupe.png" alt="Icone loupe" class="search-icon">
             </div>
         </div>
     </nav>
-    <div class="tagged">
+    <div class="tagged container__filter">
+        <div class="tag bg-blue">
+            <span>Coco</span>
+            <i class="far fa-times-circle"></i>
+        </div>
         <!-- If you add a tag, it goes here! -->
     </div>
-    <div class="container-tags ">
-        <input type="search " class=" bg-blue tag-search">
-        <div class="bg-blue">
-            <i class="fas fa-chevron-up "></i>
+    <div class="container__filter">
+
+         <!-- Tags Ingrédients -->
+        <div class="bg-blue component-filter">
+            <div>
+                <span>Ingrédients</span>
+                <input type="search" class="hidden">
+            </div>
+            <div>
+                <i class="fas fa-chevron-up "></i>
+                <i class="fas fa-chevron-down hidden "></i>
+            </div>
+        </div>
+        <!-- Tags Appareils -->
+        <div class="bg-green component-filter">
+            <div>
+                <span>Appareils</span>
+                <input type="search" class="hidden">
+            </div>
+            <div>
+                <i class="fas fa-chevron-up "></i>
+                <i class="fas fa-chevron-down hidden "></i>
+            </div>
+        </div>
+        <!-- Tags Ustensils -->
+        <div class="bg-red component-filter">
+            <div>
+                <span>Ustensils</span>
+                <input type="search" class="hidden">
+            </div>
+            <div>
+                <i class="fas fa-chevron-up "></i>
+                <i class="fas fa-chevron-down hidden "></i>
+            </div>
         </div>
     </div>
 </body>
