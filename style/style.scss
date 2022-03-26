@@ -4,7 +4,9 @@ $grey : #E7E7E7;
 $blue : #3282F7;
 $green : #68D9A4;
 $red : #ED6454;
+$dark-grey : #C7BEBE;
 
+// Fonts
 @font-face {
     font-family: 'Lato';
     src: url('../font/Lato/Lato-Regular.ttf');
@@ -13,10 +15,20 @@ $red : #ED6454;
     font-family: 'Lato-Bold';
     src: url('../font/Lato/Lato-Bold.ttf');
 }
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/Roboto/Roboto-Regular.ttf');
+}
 
 *{
     font-family: 'Lato', 'Courrier', 'sans-serif';
 }
+
+h3{
+    font-size: 18px;
+    font-weight: 400;
+}
+
 // Backgrounds
 .bg-grey{
     background: $grey;
@@ -52,7 +64,7 @@ header{
 
 .container{
     display: flex;
-    margin: 2% 15%;
+    margin: 2% 10%;
 
     // Main search bar
     &__searchbar{
@@ -83,11 +95,68 @@ header{
 
 }
 
+article{
+    width: 30%;
+    border-radius: 5px;
+    overflow: hidden;
+    
+    .article-picture{
+        min-height: 180px;
+        background: $dark-grey;
+    }
+    .article-bottom{
+        background: $grey;
+        padding:  0 5%;
+    }
+    .article-header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .article-time{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 25%;
+    }
+    .article-description{
+        display: flex;
+
+        .description-left{
+            width: 50%;
+        }
+        .description-right{
+            width: 50%;
+        }
+
+        ul{
+            padding: 0;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        li{
+            list-style: none;
+            padding: 0;
+        }
+        strong{
+            font-weight: 700;
+        }
+        p{
+            font-family: 'Roboto', 'Courrier', 'sans-serif';
+            font-weight: 400;
+            font-size: 12px;
+        }
+
+    }
+    
+
+}
+
+
 
 .container__filter{
     display: flex;
     justify-items: flex-start;
-    margin: 2% 15%;   
+    margin: 2% 10%;   
     color: white;
 }
 
