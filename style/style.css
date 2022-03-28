@@ -42,6 +42,10 @@ h3 {
   display: none;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,6 +80,7 @@ header .logo {
   height: 45px;
   border: none;
   border-radius: 5px 0 0 5px;
+  padding: 0 10px;
 }
 
 .container__searchbar .btn-search {
@@ -95,10 +100,19 @@ header .logo {
   margin: 5px;
 }
 
+.container__recipes {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
 article {
   width: 30%;
   border-radius: 5px;
   overflow: hidden;
+  margin: 2% 0;
 }
 
 article .article-picture {
@@ -109,6 +123,7 @@ article .article-picture {
 article .article-bottom {
   background: #E7E7E7;
   padding: 0 5%;
+  height: 200px;
 }
 
 article .article-header {
@@ -127,10 +142,10 @@ article .article-time {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  min-width: 25%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  min-width: 40%;
 }
 
 article .article-description {
@@ -166,6 +181,17 @@ article .article-description p {
   font-family: 'Roboto', 'Courrier', 'sans-serif';
   font-weight: 400;
   font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+  margin-bottom: 5px;
+}
+
+article .fa-clock {
+  margin-right: 5px;
 }
 
 .container__filter {
@@ -175,6 +201,8 @@ article .article-description p {
   justify-items: flex-start;
   margin: 2% 10%;
   color: white;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .component-filter {
@@ -223,4 +251,25 @@ article .article-description p {
 }
 
 /* Create "tagged" class */
+@media (max-width: 991px) {
+  article {
+    width: 45%;
+  }
+  .component-filter {
+    width: 25%;
+  }
+  .tag {
+    width: 20%;
+  }
+}
+
+@media (max-width: 667px) {
+  article {
+    width: 90%;
+  }
+  .component-filter {
+    margin-bottom: 2%;
+    width: 40%;
+  }
+}
 /*# sourceMappingURL=style.css.map */

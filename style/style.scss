@@ -47,6 +47,12 @@ h3{
     display: none;
 }
 
+// Cursor
+
+.pointer{
+    cursor: pointer;
+}
+
 // Header
 
 header{
@@ -66,6 +72,7 @@ header{
     display: flex;
     margin: 2% 10%;
 
+
     // Main search bar
     &__searchbar{
         flex-direction: row;
@@ -76,6 +83,7 @@ header{
             height: 45px;
             border: none;
             border-radius: 5px 0 0 5px;
+            padding:  0 10px;
         }
         // Search button
         .btn-search{
@@ -95,10 +103,18 @@ header{
 
 }
 
+
+.container__recipes{
+        justify-content: space-between;
+        flex-flow: wrap;
+    }
+
 article{
     width: 30%;
     border-radius: 5px;
     overflow: hidden;
+    margin: 2% 0;
+   
     
     .article-picture{
         min-height: 180px;
@@ -107,6 +123,7 @@ article{
     .article-bottom{
         background: $grey;
         padding:  0 5%;
+        height: 200px;
     }
     .article-header {
         display: flex;
@@ -115,11 +132,12 @@ article{
     .article-time{
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        min-width: 25%;
+        justify-content: flex-end;
+        min-width: 40%;
     }
     .article-description{
         display: flex;
+        
 
         .description-left{
             width: 50%;
@@ -144,12 +162,22 @@ article{
             font-family: 'Roboto', 'Courrier', 'sans-serif';
             font-weight: 400;
             font-size: 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 6; /* number of lines to show */
+            -webkit-box-orient: vertical;
+            margin-bottom: 5px;
         }
 
+    }
+    .fa-clock{
+        margin-right: 5px;
     }
     
 
 }
+
 
 
 
@@ -158,6 +186,7 @@ article{
     justify-items: flex-start;
     margin: 2% 10%;   
     color: white;
+    flex-wrap: wrap;
 }
 
 .component-filter{
@@ -199,3 +228,29 @@ article{
 
 
 /* Create "tagged" class */
+
+
+
+
+
+// Media Queries
+@media (max-width: 991px){
+    article{
+        width: 45%;
+    }
+    .component-filter{
+        width: 25%;
+    }
+    .tag{
+        width: 20%;
+    }
+}
+@media (max-width: 667px){
+    article{
+        width: 90%;
+    }
+    .component-filter{
+        margin-bottom: 2%;
+        width: 40%;
+    }
+}
