@@ -35,9 +35,8 @@ class Recipe {
             <div class="article-description">
                 <div class="description-left">
                     <ul class = "ingredientList">
-                    <li><strong>${this.ingredients[0].ingredient ? this.ingredients[0].ingredient : ''}</strong> : ${this.ingredients[0].quantity} ${this.ingredients[0].unit ? this.ingredients[0].unit : ''}</li> 
-                    <li><strong>${this.ingredients[1].ingredient ? this.ingredients[1].ingredient : ''}</strong> : ${this.ingredients[1].quantity} ${this.ingredients[1].unit ? this.ingredients[1].unit : ''}</li> 
-                    <li><strong>${this.ingredients[2].ingredient ? this.ingredients[2].ingredient : ''}</strong> : ${this.ingredients[2].quantity} ${this.ingredients[2].unit ? this.ingredients[2].unit : ''}</li>  
+                    ${this.ingredients.map(myIngredients =>`<li><strong>${myIngredients.ingredient? myIngredients.ingredient : ''}</strong> : ${myIngredients.quantity ? myIngredients.quantity : ''} ${myIngredients.unit ? myIngredients.unit : ''}</li> ` ).join('')}
+                    
                     </ul>
                 </div>
                 <div class="description-right">
@@ -51,6 +50,38 @@ class Recipe {
         `
     }
 
+    getIngredients(ingredients){
+        
+
+        let ingredientList = '';
+
+        ingredients.forEach(myIngredients => {
+            ingredientList +=
+            `
+            <li><strong>${myIngredients.ingredient? myIngredients.ingredient : ''}</strong> : ${myIngredients.quantity ? myIngredients.quantity : ''} ${myIngredients.unit ? myIngredients.unit : ''}</li> 
+            `
+
+        });
+        return ingredientList;
+
+
+        
+        
+
+     
+    }
+
+
+
 }
+// ${this.getIngredients(this.ingredients)}
 
+// let ingredientList = document.querySelector('ul');
+        // this.ingredients.forEach(myIngredients => {
+        //     console.log(myIngredients);
+        //     ingredientList.innerHTML +=
+        //     `
+        //     <li><strong>${myIngredients.ingredient? myIngredients.ingredient : ''}</strong> : ${myIngredients.quantity ? myIngredients.quantity : ''} ${myIngredients.unit ? myIngredients.unit : ''}</li> 
+        //     `
 
+        // });

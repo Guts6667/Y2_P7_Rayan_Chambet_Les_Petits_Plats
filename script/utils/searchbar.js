@@ -1,12 +1,5 @@
-let searchbar = document.querySelector('#searchbar');
-
-
-const searchbarFunc = () => {
-
-
-   detectSearchInput();
-}
-
+/*Récupère la searchbar */
+const searchbar = document.querySelector('#searchbar');
 
 
 // -----------------------------------------------------------------------------------------------------
@@ -21,10 +14,11 @@ const detectSearchInput = () =>{
 }
 
 // -----------------------------------------------------------------------------------------------------
-// Filter when typing in searchbar
+// Filter when typing in searchbar (Utiliser filter pour trouver TOUTES les valeurs correspondantes)
 let myRecipe = []
 const searchFilter = () =>{
-    myRecipe = myRecipes.find(o => o.description  === searchbar.value);
+    console.log(recipes);
+    myRecipe = recipes.filter(recipe => recipe.name.includes(searchbar.value) || recipe.description.includes(searchbar.value));
   
     console.log(myRecipe);
    };
@@ -38,5 +32,11 @@ const searchFilter = () =>{
 
 
 // -----------------------------------------------------------------------------------------------------
+const searchbarFunc = () => {
+
+
+    detectSearchInput();
+ }
+ 
 // Call Search Function
 searchbarFunc();
