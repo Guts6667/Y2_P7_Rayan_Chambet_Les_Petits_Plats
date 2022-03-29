@@ -6,7 +6,6 @@ myRecipes.push(recipe)
 })
 console.log(myRecipes);
 
-
 // ---------------------------------------------------------------------------------------------------
 // Create Recipes Cards
 
@@ -18,6 +17,12 @@ const displayRecipeCards = () => {
     myRecipes.forEach(myRecipe => {
         recipesContainer.innerHTML +=
         myRecipe.createRecipeCard();
+
     })
+
 }
+
 displayRecipeCards();
+
+
+// console.log(recipes.map((recipe) => recipe.ingredients));
