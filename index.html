@@ -32,13 +32,19 @@
          <!-- Tags Ingrédients -->
         <div class="bg-blue component-filter">
             <div>
-                <span>Ingrédients</span>
-                <input type="search" class="hidden">
+                <div>
+                    <input type="text" name="" id="" placeholder="Ingrédients">
+                </div>
+                <div>
+                    <i class="fas fa-chevron-up pointer"></i>
+                    <i class="fas fa-chevron-down hidden pointer"></i>
+                </div>
             </div>
-            <div>
-                <i class="fas fa-chevron-up pointer"></i>
-                <i class="fas fa-chevron-down hidden pointer"></i>
-            </div>
+            <aside>
+                <ul class="ingredientResults">
+
+                </ul>
+            </aside>
         </div>
         <!-- Tags Appareils -->
         <div class="bg-green component-filter">
@@ -72,5 +78,6 @@
     <script src="./script/utils/displayCard.js"></script>
     <script src="./script/pages/index.js"></script>
     <script src="./script/utils/searchbar.js"></script>
+    <script src="./script/utils/fillDropbox.js"></script>
 </body>
 </html>

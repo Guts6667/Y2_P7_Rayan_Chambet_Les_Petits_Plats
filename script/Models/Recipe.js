@@ -74,14 +74,3 @@ class Recipe {
 
 
 }
-// ${this.getIngredients(this.ingredients)}
-
-// let ingredientList = document.querySelector('ul');
-        // this.ingredients.forEach(myIngredients => {
-        //     console.log(myIngredients);
-        //     ingredientList.innerHTML +=
-        //     `
-        //     <li><strong>${myIngredients.ingredient? myIngredients.ingredient : ''}</strong> : ${myIngredients.quantity ? myIngredients.quantity : ''} ${myIngredients.unit ? myIngredients.unit : ''}</li> 
-        //     `
-
-        // });
