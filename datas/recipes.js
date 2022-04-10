@@ -701,7 +701,7 @@ const recipes = [
             }
         ],
         "time": 30,
-        "description":"Faire cuire les pates comme indiqué sur le paquet. Dorer les lardons dans une sauteuse avec l'huile d'olive. Ajouter la crême fraiche et baisser le feu au minimum. Quand les Tagliatelles sont prêtes les mettre dans la sauteuse et bien mélanger le tout en ajoutant le jaune d'oeuf. Servir et ajouter le parmesan râpé.",
+        "description":"Faire cuire les pates comme indiqué sur le paquet. Dorer les lardons dans une sauteuse avec l'huile d'olive. Ajouter la crème fraiche et baisser le feu au minimum. Quand les Tagliatelles sont prêtes les mettre dans la sauteuse et bien mélanger le tout en ajoutant le jaune d'oeuf. Servir et ajouter le parmesan râpé.",
         "appliance": "Sauteuse",
         "ustensils":["râpe à fromage", "cuillère en bois"]
     },
@@ -735,7 +735,7 @@ const recipes = [
                 "unit": "cl"
             },
             {
-                "ingredient": "Crème Fraiche",
+                "ingredient": "Crème fraiche",
                 "quantity" : 1,
                 "unit": "cuillères à soupe"
             }
@@ -805,7 +805,7 @@ const recipes = [
                 "quantity": 3
             },
             {
-                "ingredient": "Crème Fraîche",
+                "ingredient": "Crème fraiche",
                 "quantity": 20,
                 "unit": "cl"
             },
@@ -816,7 +816,7 @@ const recipes = [
             }
         ],
         "time": 60,
-        "description":"Etaler la pate dans un moule et la piquer.Parsemer de beurre. Faire chauffer les lardon dans une poêle. Battre les oeufs en ajoutant la crème fraîche et le lait. Finalement ajouter les lardons, salez poivrez à votre gout. Verser l'ensemble sur la pâte. Cuire environ 50 minutes.",
+        "description":"Etaler la pate dans un moule et la piquer.Parsemer de beurre. Faire chauffer les lardon dans une poêle. Battre les oeufs en ajoutant la crème fraiche et le lait. Finalement ajouter les lardons, salez poivrez à votre gout. Verser l'ensemble sur la pâte. Cuire environ 50 minutes.",
         "appliance": "Four",
         "ustensils":["moule à gateaux", "rouleau à patisserie", "fouet"]
     },
@@ -939,7 +939,7 @@ const recipes = [
                 "quantity": 1
             },
             {
-                "ingredient": "Crème fraîche",
+                "ingredient": "Crème fraiche",
                 "quantity": 4,
                 "unit": "cuillère à soupe"
             },
@@ -955,7 +955,7 @@ const recipes = [
             }
         ],
         "time": 15,
-        "description":"Faire fondre l'oseille avec du beurre demi sel, ajouter un litre d'eau. Ajouter les vermicelles. Laisser cuire. une foit prêt, sortir du feu et après 5 minutes ajouter le jaune d'oeuf et la crême fraîche",
+        "description":"Faire fondre l'oseille avec du beurre demi sel, ajouter un litre d'eau. Ajouter les vermicelles. Laisser cuire. une foit prêt, sortir du feu et après 5 minutes ajouter le jaune d'oeuf et la crème fraiche",
         "appliance": "Casserolle",
         "ustensils":["couteau","cuillère en bois"]
     },
@@ -984,7 +984,7 @@ const recipes = [
                 "unit":"grammes"
             },
             {
-                "ingredient": "Crême fraîche",
+                "ingredient": "Crème fraiche",
                 "quantity": 10,
                 "unit": "cl"
             }
@@ -1171,7 +1171,7 @@ const recipes = [
                 "unit": "grammes"
             },
             {
-                "ingredient": "Crème fraîche",
+                "ingredient": "Crème fraiche",
                 "quantity": 20,
                 "unit": "cl"
             },
@@ -1207,7 +1207,7 @@ const recipes = [
                 "unit": "grammes"
             },
             {
-                "ingredient": "Crème fraîche",
+                "ingredient": "Crème fraiche",
                 "quantity": 2,
                 "unit":"cuillères à soupe"
             },
@@ -1610,7 +1610,7 @@ const recipes = [
                 "unit": "grammes"
             },
             {
-                "ingredient": "Crème Fraîche",
+                "ingredient": "Crème fraiche",
                 "quantity": 20,
                 "unit":"cl"
             }

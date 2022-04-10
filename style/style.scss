@@ -85,6 +85,9 @@ header{
             border-radius: 5px 0 0 5px;
             padding:  0 10px;
         }
+        .searchbar:focus{
+            outline: none;
+        }
         // Search button
         .btn-search{
             height: 45px;
@@ -193,13 +196,36 @@ article{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 15%;
-    height: 60px;
+    flex-direction: column;
+    min-width: 20%;
+    min-height: 60px;
     border-radius: 5px;
     margin-right: 2%;
+
+    .filterClosed{
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        
+    }
+    
+    
 }
-
-
+.searchbarTags::placeholder{
+    color: white;
+   
+}
+.searchbarTags{
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-color: none;
+    width: 60%;
+}
+.searchbarTags:focus{
+    outline: none;
+}
 .tag{
     display: flex;
     align-items: center;
@@ -210,6 +236,16 @@ article{
     font-size: 14px;
 
 }
+
+.ingredientResults{ 
+    columns: 3;
+    list-style-position: inside;//this is important addition
+
+    li{
+        list-style-type: none;
+    }
+}
+
 
 
 
@@ -239,7 +275,7 @@ article{
         width: 45%;
     }
     .component-filter{
-        width: 25%;
+        min-width: 25%;
     }
     .tag{
         width: 20%;
@@ -247,10 +283,14 @@ article{
 }
 @media (max-width: 667px){
     article{
-        width: 90%;
+        width: 100%;
     }
     .component-filter{
         margin-bottom: 2%;
-        width: 40%;
+        width: 100%;
+    }
+
+    .searchbarTags{
+        width: 100%;
     }
 }
