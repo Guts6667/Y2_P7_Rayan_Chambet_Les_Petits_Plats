@@ -295,6 +295,26 @@ article .fa-clock {
   list-style-type: none;
 }
 
+.appliancesResults {
+  -webkit-columns: 3;
+          columns: 3;
+  list-style-position: inside;
+}
+
+.appliancesResults li {
+  list-style-type: none;
+}
+
+.ustensilsResults {
+  -webkit-columns: 3;
+          columns: 3;
+  list-style-position: inside;
+}
+
+.ustensilsResults li {
+  list-style-type: none;
+}
+
 .tag-search {
   height: 20px;
   border: none;

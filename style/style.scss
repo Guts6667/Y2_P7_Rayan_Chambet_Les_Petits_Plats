@@ -245,8 +245,23 @@ article{
         list-style-type: none;
     }
 }
+.appliancesResults{ 
+    columns: 3;
+    list-style-position: inside;//this is important addition
 
+    li{
+        list-style-type: none;
+    }
+}
 
+.ustensilsResults{ 
+    columns: 3;
+    list-style-position: inside;//this is important addition
+
+    li{
+        list-style-type: none;
+    }
+}
 
 
 .tag-search{
