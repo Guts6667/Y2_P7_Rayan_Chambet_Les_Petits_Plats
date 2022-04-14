@@ -1,5 +1,8 @@
+// Filtrer les propositions d'ingrédients selon ce qu'il y a dans currentRecipes
+// Au click sur un ingrédient => Créer un tag
 
-console.log(ingredientSearchbar);
+
+
 const detectTagSearchIngredient = () => {
     ingredientSearchbar.addEventListener("input", (e) => {
       if (ingredientSearchbar.value.length >= 3) {
@@ -13,6 +16,25 @@ const detectTagSearchIngredient = () => {
     });
   };
   detectTagSearchIngredient()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

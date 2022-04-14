@@ -3,7 +3,7 @@
 // Aside: Contains all of the ingredients.
 let asideIngredients = document.querySelector('#asideIngredients')
 // IngredientLists: <ul>
-let ingredientList = document.querySelector('.ingredientResults');
+let ingredientResults = document.querySelector('.ingredientResults');
 // Chevron Up 
 let arrowUpIngredients = document.querySelector('#arrowUpIngredients');
 // Chevron Down
@@ -27,7 +27,7 @@ let ustensilSearchbar = document.querySelector('#ustensilSearchbar')
 // When the chevron 'Up' is clicked, calls pushIngredients()
 arrowUpIngredients.addEventListener('click', (e) => {
     e.preventDefault();
-    pushIngredient();
+    displayIngredientComponent()
 })
 // When the chevron 'Down' is clicked, calls hideIngredients()
 arrowDownIngredients.addEventListener('click', (e) => {
@@ -57,9 +57,9 @@ arrowDownUstensils.addEventListener('click', (e) => {
 //------------------------------------------------------------------------------------
 let allIngredients = [];
 
-// Function pushIngredients: Display all ingredients
-const pushIngredient = () => {
+// Function updateIngredients : Update ingredient list
 
+const updateIngredients = () => {
     currentRecipes.forEach(recipe => {
         
         recipe.ingredients.forEach(ingredient => {
@@ -70,21 +70,27 @@ const pushIngredient = () => {
     allIngredients = [...new Set([...allIngredients])].sort()
     console.log(allIngredients);
 
-    asideIngredients.classList.remove('hidden')
-    arrowUpIngredients.classList.add('hidden');
-    arrowDownIngredients.classList.remove('hidden');
-    ingredientSearchbar.classList.add('tagSearch')
-    ingredientSearchbar.setAttribute('placeholder', 'Rechercher un ingrédient')
-    
-
     let tempInnerHTMLIngre;
+    ingredientResults.innerHTML = "";
     allIngredients.forEach(ingredient => {
         
         tempInnerHTMLIngre += `<li class = 'ingredientTag pointer'>${ingredient}</li> `
     })
 
-    ingredientList.innerHTML = tempInnerHTMLIngre;
+    ingredientResults.innerHTML = tempInnerHTMLIngre;
+
 }
+
+// Fonction display ingredients
+const displayIngredientComponent = () => {
+    asideIngredients.classList.remove('hidden')
+    arrowUpIngredients.classList.add('hidden');
+    arrowDownIngredients.classList.remove('hidden');
+    ingredientSearchbar.classList.add('tagSearch')
+    ingredientSearchbar.setAttribute('placeholder', 'Rechercher un ingrédient')
+    updateIngredients()
+}
+
 
 //------------------------------------------------------------------------------------
 // Function hideIngredients: Hide all ingredients
@@ -101,7 +107,7 @@ const hideIngredients = ()=> {
 // Functions for Appliances
 let allAppliances = [];
 
-const pushAppliances = () => {
+const updateAppliances = () => {
 
     currentRecipes.forEach(recipe => {
         allAppliances.push(recipe.appliance);
@@ -109,14 +115,9 @@ const pushAppliances = () => {
 
     allAppliances = [...new Set([...allAppliances])].sort()
     
-
-    asideAppliances.classList.remove('hidden')
-    arrowUpAppliances.classList.add('hidden');
-    arrowDownAppliances.classList.remove('hidden');
-    applianceSearchbar.classList.add('tagSearch')
-    applianceSearchbar.setAttribute('placeholder', 'Rechercher un appareil')
-
     let tempInnerHTMLAppliance;
+    appliancesResults.innerHTML = '';
+
     allAppliances.forEach(appliance => {
         
         tempInnerHTMLAppliance += `<li class = 'applianceTag pointer'>${appliance}</li> `
@@ -124,6 +125,15 @@ const pushAppliances = () => {
     
 
     appliancesResults.innerHTML = tempInnerHTMLAppliance;
+}
+
+const displayApplianceComponent = () => {
+    asideAppliances.classList.remove('hidden')
+    arrowUpAppliances.classList.add('hidden');
+    arrowDownAppliances.classList.remove('hidden');
+    applianceSearchbar.classList.add('tagSearch')
+    applianceSearchbar.setAttribute('placeholder', 'Rechercher un appareil')
+    updateAppliances()
 }
 
 const hideAppliances = ()=> {
@@ -139,7 +149,7 @@ const hideAppliances = ()=> {
 // Functions for Ustensils
 let allUstensils = [];
 
-const pushUstensils = () => {
+const updateUstensils = () => {
 
     currentRecipes.forEach(recipe => {
         
@@ -150,19 +160,22 @@ const pushUstensils = () => {
     allUstensils = allUstensils.flatMap(ustensils => ustensils)
     allUstensils = [...new Set([...allUstensils])].sort()
 
-    asideUstensils.classList.remove('hidden')
-    arrowUpUstensils.classList.add('hidden');
-    arrowDownUstensils.classList.remove('hidden');
-    ustensilSearchbar.classList.add('tagSearch')
-    ustensilSearchbar.setAttribute('placeholder', 'Rechercher un ustensil')
-
     let tempInnerHTMLUstensils;
+    ustensilsResults.innerHTML = '';
     allUstensils.forEach(ustensil => {
         
         tempInnerHTMLUstensils += `<li class = 'ustensilsTag pointer'>${ustensil}</li> `
     })
     
     ustensilsResults.innerHTML = tempInnerHTMLUstensils;
+}
+
+const displayUstensilsComponent = () =>{
+    asideUstensils.classList.remove('hidden')
+    arrowUpUstensils.classList.add('hidden');
+    arrowDownUstensils.classList.remove('hidden');
+    ustensilSearchbar.classList.add('tagSearch')
+    ustensilSearchbar.setAttribute('placeholder', 'Rechercher un ustensil')
 }
 
 

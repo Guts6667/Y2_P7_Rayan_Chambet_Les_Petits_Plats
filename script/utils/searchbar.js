@@ -8,6 +8,7 @@ const detectSearchInput = () => {
     if (searchbar.value.length >= 3) {
       console.log(searchbar.value);
       searchFilter();
+      updateIngredients()
     }
     else{
         currentRecipes = recipes;
