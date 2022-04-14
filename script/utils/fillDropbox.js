@@ -8,18 +8,21 @@ let ingredientList = document.querySelector('.ingredientResults');
 let arrowUpIngredients = document.querySelector('#arrowUpIngredients');
 // Chevron Down
 let arrowDownIngredients = document.querySelector('#arrowDownIngredients');
+let ingredientSearchbar = document.querySelector('#ingredientSearchbar')
 
 // Appliances
 let asideAppliances = document.querySelector('#asideAppliances');
 let arrowUpAppliances = document.querySelector('#arrowUpAppliances');
 let arrowDownAppliances = document.querySelector('#arrowDownAppliances');
 let appliancesResults = document.querySelector('.appliancesResults');
+let applianceSearchbar = document.querySelector('#applianceSearchbar')
 
 // Ustensils
 let asideUstensils = document.querySelector('#asideUstensils');
 let arrowUpUstensils = document.querySelector('#arrowUpUstensils');
 let arrowDownUstensils = document.querySelector('#arrowDownUstensils');
 let ustensilsResults = document.querySelector('.ustensilsResults');
+let ustensilSearchbar = document.querySelector('#ustensilSearchbar')
 //------------------------------------------------------------------------------------
 // When the chevron 'Up' is clicked, calls pushIngredients()
 arrowUpIngredients.addEventListener('click', (e) => {
@@ -70,6 +73,9 @@ const pushIngredient = () => {
     asideIngredients.classList.remove('hidden')
     arrowUpIngredients.classList.add('hidden');
     arrowDownIngredients.classList.remove('hidden');
+    ingredientSearchbar.classList.add('tagSearch')
+    ingredientSearchbar.setAttribute('placeholder', 'Rechercher un ingrédient')
+    
 
     let tempInnerHTMLIngre;
     allIngredients.forEach(ingredient => {
@@ -86,6 +92,8 @@ const hideIngredients = ()=> {
     asideIngredients.classList.add('hidden');
     arrowDownIngredients.classList.add('hidden');
     arrowUpIngredients.classList.remove('hidden')
+    ingredientSearchbar.setAttribute('placeholder', 'Ingrédients')
+    ingredientSearchbar.classList.remove('tagSearch')
 }
 
 
@@ -105,6 +113,8 @@ const pushAppliances = () => {
     asideAppliances.classList.remove('hidden')
     arrowUpAppliances.classList.add('hidden');
     arrowDownAppliances.classList.remove('hidden');
+    applianceSearchbar.classList.add('tagSearch')
+    applianceSearchbar.setAttribute('placeholder', 'Rechercher un appareil')
 
     let tempInnerHTMLAppliance;
     allAppliances.forEach(appliance => {
@@ -120,6 +130,8 @@ const hideAppliances = ()=> {
     asideAppliances.classList.add('hidden');
     arrowDownAppliances.classList.add('hidden');
     arrowUpAppliances.classList.remove('hidden')
+    applianceSearchbar.classList.remove('tagSearch')
+    applianceSearchbar.setAttribute('placeholder', 'Appareils')
 }
 
 
@@ -137,12 +149,12 @@ const pushUstensils = () => {
 
     allUstensils = allUstensils.flatMap(ustensils => ustensils)
     allUstensils = [...new Set([...allUstensils])].sort()
-    console.log(allUstensils);
-    
 
     asideUstensils.classList.remove('hidden')
     arrowUpUstensils.classList.add('hidden');
     arrowDownUstensils.classList.remove('hidden');
+    ustensilSearchbar.classList.add('tagSearch')
+    ustensilSearchbar.setAttribute('placeholder', 'Rechercher un ustensil')
 
     let tempInnerHTMLUstensils;
     allUstensils.forEach(ustensil => {
@@ -150,7 +162,6 @@ const pushUstensils = () => {
         tempInnerHTMLUstensils += `<li class = 'ustensilsTag pointer'>${ustensil}</li> `
     })
     
-
     ustensilsResults.innerHTML = tempInnerHTMLUstensils;
 }
 
@@ -159,4 +170,6 @@ const hideUstensils = ()=> {
     asideUstensils.classList.add('hidden');
     arrowDownUstensils.classList.add('hidden');
     arrowUpUstensils.classList.remove('hidden')
+    ustensilSearchbar.classList.remove('tagSearch')
+    ustensilSearchbar.setAttribute('placeholder', 'Ustensils')
 }
