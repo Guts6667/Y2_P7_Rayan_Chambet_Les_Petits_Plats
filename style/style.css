@@ -369,6 +369,10 @@ article .fa-clock {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
+.fa-times-circle {
+  font-size: 16px;
+}
+
 /* Create "tagged" class */
 @media (max-width: 991px) {
   article {
@@ -378,7 +382,7 @@ article .fa-clock {
     min-width: 25%;
   }
   .tag {
-    width: 20%;
+    min-width: 20%;
   }
 }
 

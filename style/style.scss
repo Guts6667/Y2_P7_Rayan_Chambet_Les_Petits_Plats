@@ -303,6 +303,9 @@ article{
     color: $searchTag !important;
 }
 
+.fa-times-circle{
+    font-size: 16px;
+}
 /* Create "tagged" class */
 
 
@@ -318,7 +321,7 @@ article{
         min-width: 25%;
     }
     .tag{
-        width: 20%;
+        min-width: 20%;
     }
 }
 @media (max-width: 667px){

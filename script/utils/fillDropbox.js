@@ -8,7 +8,7 @@ let ingredientResults = document.querySelector('.ingredientResults');
 let arrowUpIngredients = document.querySelector('#arrowUpIngredients');
 // Chevron Down
 let arrowDownIngredients = document.querySelector('#arrowDownIngredients');
-let ingredientSearchbar = document.querySelector('#ingredientSearchbar')
+const ingredientSearchbar = document.querySelector('#ingredientSearchbar')
 
 // Appliances
 let asideAppliances = document.querySelector('#asideAppliances');
@@ -55,12 +55,12 @@ arrowDownUstensils.addEventListener('click', (e) => {
     hideUstensils();
 })
 //------------------------------------------------------------------------------------
-let allIngredients = [];
+
 
 // Function updateIngredients : Update ingredient list
 
 const updateIngredients = () => {
-    
+   let allIngredients = [];
     currentRecipes.forEach(recipe => {
         
         recipe.ingredients.forEach(ingredient => {
@@ -71,11 +71,11 @@ const updateIngredients = () => {
     allIngredients = [...new Set([...allIngredients])].sort()
     
 
-    let tempInnerHTMLIngre;
+    let tempInnerHTMLIngre = "";
     ingredientResults.innerHTML = "";
     allIngredients.forEach(ingredient => {
         
-        tempInnerHTMLIngre += `<li class = 'ingredientTag pointer'>${ingredient}</li> `
+        tempInnerHTMLIngre += `<li class ='ingredientTag pointer'>${ingredient}</li> `
     })
 
     ingredientResults.innerHTML = tempInnerHTMLIngre;
@@ -90,7 +90,7 @@ const displayIngredientComponent = () => {
     ingredientSearchbar.classList.add('tagSearch')
     ingredientSearchbar.setAttribute('placeholder', 'Rechercher un ingrédient')
     updateIngredients()
-    addTag()
+    addTagIngredient()
 }
 
 
@@ -117,7 +117,7 @@ const updateAppliances = () => {
 
     allAppliances = [...new Set([...allAppliances])].sort()
     
-    let tempInnerHTMLAppliance;
+    let tempInnerHTMLAppliance = "";
     appliancesResults.innerHTML = '';
 
     allAppliances.forEach(appliance => {
@@ -136,6 +136,7 @@ const displayApplianceComponent = () => {
     applianceSearchbar.classList.add('tagSearch')
     applianceSearchbar.setAttribute('placeholder', 'Rechercher un appareil')
     updateAppliances()
+    addTagAppliance()
 }
 
 const hideAppliances = ()=> {
@@ -161,7 +162,7 @@ const updateUstensils = () => {
     allUstensils = allUstensils.flatMap(ustensils => ustensils)
     allUstensils = [...new Set([...allUstensils])].sort()
 
-    let tempInnerHTMLUstensils;
+    let tempInnerHTMLUstensils = "";
     ustensilsResults.innerHTML = '';
     allUstensils.forEach(ustensil => {
         
@@ -178,6 +179,7 @@ const displayUstensilsComponent = () =>{
     ustensilSearchbar.classList.add('tagSearch')
     ustensilSearchbar.setAttribute('placeholder', 'Rechercher un ustensil')
     updateUstensils()
+    addTagUstensils()
 }
 
 

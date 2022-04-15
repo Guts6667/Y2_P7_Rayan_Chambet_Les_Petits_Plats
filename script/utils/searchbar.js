@@ -13,6 +13,7 @@ const detectSearchInput = () => {
     else{
         currentRecipes = recipes;
         displayRecipeCards();
+        updateIngredients();
     }
   });
   
