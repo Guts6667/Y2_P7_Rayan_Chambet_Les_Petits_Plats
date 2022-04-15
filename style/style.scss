@@ -235,12 +235,23 @@ article{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 37px;
-    width: 10%; 
+    min-height: 37px;
+    min-width: 15%; 
     border-radius: 5px;
     font-size: 14px;
+    margin: 5px;
+    padding:  0 5px;
 
+    span{
+        margin: 0 5px;
+    }
+    i{
+        margin: 0 5px;
+    }
 }
+
+
+
 
 .ingredientResults{ 
     columns: 3;

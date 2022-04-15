@@ -90,6 +90,7 @@ const displayIngredientComponent = () => {
     ingredientSearchbar.classList.add('tagSearch')
     ingredientSearchbar.setAttribute('placeholder', 'Rechercher un ingrédient')
     updateIngredients()
+    addTag()
 }
 
 

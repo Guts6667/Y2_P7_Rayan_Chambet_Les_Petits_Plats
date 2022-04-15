@@ -1,6 +1,27 @@
 // Filtrer les propositions d'ingrédients selon ce qu'il y a dans currentRecipes
 // Au click sur un ingrédient => Créer un tag
-
+let tagComponent = document.querySelector('.tagged')
+const addTag = () => {
+    let ingredientTags = document.querySelectorAll('.ingredientTag');
+    console.log(ingredientTags);
+    ingredientTags.forEach(ingredient => {
+        console.log(ingredient);
+        ingredient.addEventListener('click', (e) => {
+            e.preventDefault();
+            let ingredient = e.target.textContent;
+                let tagElement = ` <div class="tag bg-blue">
+                                        <span>${ingredient}</span>
+                                        <i class="far fa-times-circle pointer"></i>
+                                    </div>`
+            if(tagComponent.innerHTML.includes(tagElement)){
+                console.log('Tag déjà ajouté');
+            }
+            else{
+                tagComponent.innerHTML += tagElement;
+            }
+        })
+    })
+}
 
 
 const detectTagSearchIngredient = () => {

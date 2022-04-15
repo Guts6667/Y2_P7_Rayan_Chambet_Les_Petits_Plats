@@ -284,10 +284,20 @@ article .fa-clock {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  height: 37px;
-  width: 10%;
+  min-height: 37px;
+  min-width: 15%;
   border-radius: 5px;
   font-size: 14px;
+  margin: 5px;
+  padding: 0 5px;
+}
+
+.tag span {
+  margin: 0 5px;
+}
+
+.tag i {
+  margin: 0 5px;
 }
 
 .ingredientResults {
