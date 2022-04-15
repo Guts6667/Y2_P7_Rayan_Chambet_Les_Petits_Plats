@@ -6,7 +6,7 @@ const searchbar = document.querySelector("#searchbar");
 const detectSearchInput = () => {
   searchbar.addEventListener("input", (e) => {
     if (searchbar.value.length >= 3) {
-      console.log(searchbar.value);
+      
       searchFilter();
       updateIngredients()
     }
@@ -15,6 +15,7 @@ const detectSearchInput = () => {
         displayRecipeCards();
     }
   });
+  
 };
 
 // -----------------------------------------------------------------------------------------------------
@@ -34,8 +35,8 @@ const searchFilter = () => {
           .includes(searchbar.value.toLowerCase())
       )
   );
+  updateIngredients()
 
-  console.log(currentRecipes);
   displayRecipeCards()
 };
 

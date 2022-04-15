@@ -37,7 +37,7 @@ arrowDownIngredients.addEventListener('click', (e) => {
 
 arrowUpAppliances.addEventListener('click', (e) => {
     e.preventDefault();
-    pushAppliances();
+    displayApplianceComponent()
 })
 
 arrowDownAppliances.addEventListener('click', (e) => {
@@ -47,7 +47,7 @@ arrowDownAppliances.addEventListener('click', (e) => {
 
 arrowUpUstensils.addEventListener('click', (e) => {
     e.preventDefault();
-    pushUstensils();
+    displayUstensilsComponent()
 })
 
 arrowDownUstensils.addEventListener('click', (e) => {
@@ -60,6 +60,7 @@ let allIngredients = [];
 // Function updateIngredients : Update ingredient list
 
 const updateIngredients = () => {
+    
     currentRecipes.forEach(recipe => {
         
         recipe.ingredients.forEach(ingredient => {
@@ -68,7 +69,7 @@ const updateIngredients = () => {
     })
 
     allIngredients = [...new Set([...allIngredients])].sort()
-    console.log(allIngredients);
+    
 
     let tempInnerHTMLIngre;
     ingredientResults.innerHTML = "";
@@ -155,7 +156,6 @@ const updateUstensils = () => {
         
         allUstensils.push(recipe.ustensils)
     })
-    // allUstensils.map(ustensils => ustensils)
 
     allUstensils = allUstensils.flatMap(ustensils => ustensils)
     allUstensils = [...new Set([...allUstensils])].sort()
@@ -176,6 +176,7 @@ const displayUstensilsComponent = () =>{
     arrowDownUstensils.classList.remove('hidden');
     ustensilSearchbar.classList.add('tagSearch')
     ustensilSearchbar.setAttribute('placeholder', 'Rechercher un ustensil')
+    updateUstensils()
 }
 
 
