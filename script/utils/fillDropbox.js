@@ -1,5 +1,4 @@
 
-
 // Aside: Contains all of the ingredients.
 let asideIngredients = document.querySelector('#asideIngredients')
 // IngredientLists: <ul>
@@ -55,8 +54,6 @@ arrowDownUstensils.addEventListener('click', (e) => {
     hideUstensils();
 })
 //------------------------------------------------------------------------------------
-
-
 // Function updateIngredients : Update ingredient list
 
 const updateIngredients = () => {
@@ -79,7 +76,6 @@ const updateIngredients = () => {
     })
 
     ingredientResults.innerHTML = tempInnerHTMLIngre;
-
 }
 
 // Fonction display ingredients
@@ -107,9 +103,9 @@ const hideIngredients = ()=> {
 
 //------------------------------------------------------------------------------------
 // Functions for Appliances
-let allAppliances = [];
 
 const updateAppliances = () => {
+    let allAppliances = [];
 
     currentRecipes.forEach(recipe => {
         allAppliances.push(recipe.appliance);
@@ -150,10 +146,9 @@ const hideAppliances = ()=> {
 
 //------------------------------------------------------------------------------------
 // Functions for Ustensils
-let allUstensils = [];
 
 const updateUstensils = () => {
-
+    let allUstensils = [];
     currentRecipes.forEach(recipe => {
         
         allUstensils.push(recipe.ustensils)
