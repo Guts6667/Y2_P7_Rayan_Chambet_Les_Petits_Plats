@@ -133,17 +133,17 @@ const removeTag = () => {
             e.preventDefault()
             console.log('remove tag');
             tag.remove();
+            tagIngredientUpdate();
+
             // Récupérer tous les tags, remettre current recipes à 0, puis effectuer un filter en incluant les tags récupérés
             // Puis appler update & display ingredient
         })
-
+        
     })
 }
 
 //------------------------------------------------------
-
-
-
+// Search for tags in searchbar
 const detectIngredientSearchbar = () => {
     ingredientSearchbar.addEventListener("input", (e) => {
         let ingredientTags = document.querySelectorAll('.ingredientTag');
@@ -165,4 +165,76 @@ const detectIngredientSearchbar = () => {
   };
   detectIngredientSearchbar();
 
+//------------------------------------------------------
+const detectApplianceSearchbar = () => {
+    applianceSearchbar.addEventListener("input", (e) => {
+        let applianceTags = document.querySelectorAll('.applianceTag');
+        console.log(applianceTags);
+        console.log(applianceSearchbar.value);
+        let keyWord = applianceSearchbar.value;
+
+        applianceTags.forEach(tag => {
+            console.log(tag);
+            if(!tag.textContent.toLocaleLowerCase().includes(keyWord.toLowerCase())){
+                tag.classList.add('hidden');
+            }
+            else{
+                tag.classList.remove('hidden');
+            }
+        })
+    })
+}
+detectApplianceSearchbar();
+
+//------------------------------------------------------
+
+const detectUstensilSearchbar = () => {
+    ustensilSearchbar.addEventListener("input", (e) => {
+        let ustensilTags = document.querySelectorAll('.ustensilsTag');
+        console.log(ustensilTags);
+        console.log(ustensilSearchbar.value);
+        let keyWord = ustensilSearchbar.value;
+
+        ustensilTags.forEach(tag => {
+            console.log(tag);
+            if(!tag.textContent.toLocaleLowerCase().includes(keyWord.toLowerCase())){
+                tag.classList.add('hidden');
+            }
+            else{
+                tag.classList.remove('hidden');
+            }
+        })
+    })
+}
+detectUstensilSearchbar();
+
+
+
+//------------------------------------------------------
+
+
+  const tagIngredientUpdate = () => {
+
+      let tagList = document.querySelectorAll('.tag');
+
+      tagList.forEach(tag => {
+
+          tag = tag.textContent
+          currentRecipes = recipes;
+          
+          currentRecipes = currentRecipes.filter(
+            (recipe) =>
+              recipe.ingredients.some((ingredient) =>
+                ingredient.ingredient
+                  .toLowerCase()
+                  .includes(tag.toLowerCase())
+              )
+          );
+          console.log(currentRecipes);
+          
+          updateIngredients();
+          addTagIngredient();
+          displayRecipeCards();
+      })
+  }
   
