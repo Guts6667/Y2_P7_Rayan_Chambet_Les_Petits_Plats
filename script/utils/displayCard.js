@@ -1,6 +1,6 @@
 // Create Recipes Cards
 let currentRecipes = recipes;
-let recipesContainer = document.querySelector('main');
+
 
 const displayRecipeCards = () => {
     recipesContainer.innerHTML = "";

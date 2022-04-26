@@ -1,7 +1,3 @@
-/*Récupère la searchbar */
-const searchbar = document.querySelector("#searchbar");
-
-// -----------------------------------------------------------------------------------------------------
 // Searchbar Function: Detect input while typing => calls function if length >= 3
 const detectSearchInput = () => {
   searchbar.addEventListener("input", (e) => {

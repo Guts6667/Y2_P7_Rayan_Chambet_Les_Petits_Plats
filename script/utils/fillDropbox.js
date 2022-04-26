@@ -1,54 +1,30 @@
-
-// Aside: Contains all of the ingredients.
-let asideIngredients = document.querySelector('#asideIngredients')
-// IngredientLists: <ul>
-let ingredientResults = document.querySelector('.ingredientResults');
-// Chevron Up 
-let arrowUpIngredients = document.querySelector('#arrowUpIngredients');
-// Chevron Down
-let arrowDownIngredients = document.querySelector('#arrowDownIngredients');
-const ingredientSearchbar = document.querySelector('#ingredientSearchbar')
-
-// Appliances
-let asideAppliances = document.querySelector('#asideAppliances');
-let arrowUpAppliances = document.querySelector('#arrowUpAppliances');
-let arrowDownAppliances = document.querySelector('#arrowDownAppliances');
-let appliancesResults = document.querySelector('.appliancesResults');
-let applianceSearchbar = document.querySelector('#applianceSearchbar')
-
-// Ustensils
-let asideUstensils = document.querySelector('#asideUstensils');
-let arrowUpUstensils = document.querySelector('#arrowUpUstensils');
-let arrowDownUstensils = document.querySelector('#arrowDownUstensils');
-let ustensilsResults = document.querySelector('.ustensilsResults');
-let ustensilSearchbar = document.querySelector('#ustensilSearchbar')
-//------------------------------------------------------------------------------------
 // When the chevron 'Up' is clicked, calls pushIngredients()
 arrowUpIngredients.addEventListener('click', (e) => {
     e.preventDefault();
     displayIngredientComponent()
 })
+//------------------------------------------------------------------------------------
 // When the chevron 'Down' is clicked, calls hideIngredients()
 arrowDownIngredients.addEventListener('click', (e) => {
     e.preventDefault()
     hideIngredients()
 })
-
+//------------------------------------------------------------------------------------
 arrowUpAppliances.addEventListener('click', (e) => {
     e.preventDefault();
     displayApplianceComponent()
 })
-
+//------------------------------------------------------------------------------------
 arrowDownAppliances.addEventListener('click', (e) => {
     e.preventDefault();
     hideAppliances();
 })
-
+//------------------------------------------------------------------------------------
 arrowUpUstensils.addEventListener('click', (e) => {
     e.preventDefault();
     displayUstensilsComponent()
 })
-
+//------------------------------------------------------------------------------------
 arrowDownUstensils.addEventListener('click', (e) => {
     e.preventDefault();
     hideUstensils();
