@@ -1,4 +1,5 @@
 Y2_P7_Rayan_Chambet_Les_Petits_Plats
 
 
-Régler l'alignement des éléments tags
+Afficher un message lorsqu'il n'y a pas de recettes
+

@@ -10,7 +10,7 @@ const addTagIngredient = () => {
         tag.addEventListener('click', (e) => {
             e.preventDefault();
             let ingredientTag = e.target.textContent;
-                let tagElement = ` <div class="tag bg-blue">
+                let tagElement = ` <div class="tag bg-blue blueTag">
                                         <span>${ingredientTag}</span>
                                         <i class="far fa-times-circle pointer"></i>
                                     </div>`
@@ -22,7 +22,7 @@ const addTagIngredient = () => {
             else{
                 tagComponent.innerHTML += tagElement;
             }
-            console.log(currentRecipes);
+            
             // Filter current recipes
             currentRecipes = currentRecipes.filter(
                 (recipe) =>
@@ -39,8 +39,8 @@ const addTagIngredient = () => {
             removeTag()
         })
     })
+    console.log(currentRecipes);
 }
-console.log(recipes);
 
 //------------------------------------------------------
 // Search for tags in searchbar
@@ -67,52 +67,69 @@ const detectIngredientSearchbar = () => {
 
   //------------------------------------------------------
 
+
+
+
 // Différencier les types de tags et exécuter le bon filtre selon le tag
+// const tagUpdateIngredient = () => {
+//     // Récupère la list de tag avec la class "tag"
+//     let blueTags = document.querySelectorAll('.blueTag');
+//     let greenTags = document.querySelectorAll('.greenTag');
+//     let redTags = document.querySelectorAll('.redTag');
 
-const tagIngredientUpdate = () => {
+//     // Réinitialise la valeur de currentRecipes en lui donnant la valeur de recipes
+//     currentRecipes = recipes;
+    
+//     if (searchbar.value.length >= 3) {
+//     //Filter les recettes en comparant les caractères dans la searchbar et les noms, descriptions et ingredients
+//       currentRecipes = recipes.filter(
+//           (recipe) =>
+//             recipe.name.toLowerCase().includes(searchbar.value.toLowerCase()) ||
+//             recipe.description
+//               .toLowerCase()
+//               .includes(searchbar.value.toLowerCase()) ||
+//             recipe.ingredients.some((ingredient) =>
+//               ingredient.ingredient
+//                 .toLowerCase()
+//                 .includes(searchbar.value.toLowerCase())
+//             )
+//         );
+//     }
 
-    let tagList = document.querySelectorAll('.tag');
+// // console.log(currentRecipes);
 
-    currentRecipes = recipes;
-    if (searchbar.value.length >= 3) {
-      currentRecipes = recipes.filter(
-          (recipe) =>
-            recipe.name.toLowerCase().includes(searchbar.value.toLowerCase()) ||
-            recipe.description
-              .toLowerCase()
-              .includes(searchbar.value.toLowerCase()) ||
-            recipe.ingredients.some((ingredient) =>
-              ingredient.ingredient
-                .toLowerCase()
-                .includes(searchbar.value.toLowerCase())
-            )
-        );
-    }
+// // Vérifier si les tags contiennent une classe d'une certaines couleurs
+// // Créer un array de tag par couleur
+// // Filtrer selon la couleur
+// // Update les ingrédients/appliance/ustensils;
+// // Appeler les fonctions add Tag
+// // displayRecipeCards
 
-console.log(currentRecipes);
-    tagList.forEach(tag => {
+    
 
-        tag = tag.firstElementChild.textContent;
+//     blueTags.forEach(blueTag => {
+
+//         blueTag = blueTag.firstElementChild.textContent;
        
-        console.log(tag);
+//         console.log(blueTag);
         
         
-        currentRecipes = currentRecipes.filter(
-          (recipe) => 
-            recipe.ingredients.some((ingredient) =>
-              ingredient.ingredient
-                .toLowerCase()
-                .includes(tag.toLowerCase())
-            )
+//         currentRecipes = currentRecipes.filter(
+//           (recipe) => 
+//             recipe.ingredients.some((ingredient) =>
+//               ingredient.ingredient
+//                 .toLowerCase()
+//                 .includes(blueTag.toLowerCase())
+//             )
            
-        );
-        console.log(currentRecipes);
+//         );
+//         // console.log(currentRecipes);
         
        
-    })
-    updateIngredients();
-    addTagIngredient();
-    displayRecipeCards();
-    console.log(currentRecipes);
-}
-tagIngredientUpdate();
+//     })
+
+//     updateIngredients();
+//     addTagIngredient();
+//     displayRecipeCards();
+//     console.log(currentRecipes);
+// }

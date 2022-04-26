@@ -6,9 +6,13 @@ const removeTag = () => {
     tagList.forEach(tag => {
         tag.lastElementChild.addEventListener('click', (e) => {
             e.preventDefault()
-            console.log('remove tag');
+
+            // Ici faire la distinguer le type de tag retiré et appeler le bon tag update      
             tag.remove();
-            tagIngredientUpdate();
+            tagUpdate();
+            addTagAppliance()
+            addTagIngredient()
+            addTagUstensils()
 
             // Récupérer tous les tags, remettre current recipes à 0, puis effectuer un filter en incluant les tags récupérés
             // Puis appler update & display ingredient

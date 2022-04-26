@@ -10,7 +10,8 @@ const addTagUstensils = () => {
         ustensil.addEventListener('click', (e) => {
             e.preventDefault();
             let ustensilTag = e.target.textContent;
-                let tagElement = ` <div class="tag bg-red">
+            console.log(ustensilTag);
+                let tagElement = ` <div class="tag bg-red redTag">
                                         <span>${ustensilTag}</span>
                                         <i class="far fa-times-circle pointer"></i>
                                     </div>`
@@ -34,11 +35,8 @@ const addTagUstensils = () => {
             removeTag();
         })
     })
+    console.log(currentRecipes);
 }
-
-
-
-
 
 //------------------------------------------------------
 
@@ -63,4 +61,49 @@ const detectUstensilSearchbar = () => {
 detectUstensilSearchbar();
 
 
+// const tagUpdateUstensils = () => {
+//     // Récupère la list de tag avec la class "tag"
+    
+//     let redTags = document.querySelectorAll('.redTag');
+//     console.log(redTags);
+
+//     // Réinitialise la valeur de currentRecipes en lui donnant la valeur de recipes
+//     currentRecipes = recipes;
+    
+//     if (searchbar.value.length >= 3) {
+//     //Filter les recettes en comparant les caractères dans la searchbar et les noms, descriptions et ingredients
+//       currentRecipes = recipes.filter(
+//           (recipe) =>
+//             recipe.name.toLowerCase().includes(searchbar.value.toLowerCase()) ||
+//             recipe.description
+//               .toLowerCase()
+//               .includes(searchbar.value.toLowerCase()) ||
+//             recipe.ingredients.some((ingredient) =>
+//               ingredient.ingredient
+//                 .toLowerCase()
+//                 .includes(searchbar.value.toLowerCase())
+//             )
+//         );
+//     }
+// // Faire un if (monTag = couleurTag => filtre correspondant)
+//     redTags.forEach(redTag => {
+//         redTag = redTag.firstElementChild.textContent;
+
+//         console.log(redTag);
+//         console.log(currentRecipes);
+//         currentRecipes = currentRecipes.filter(
+//             (recipe) => 
+//             recipe.ustensils.some((ustensil) =>
+//             ustensil
+//             .toLowerCase()
+//             .includes(redTag.toLowerCase())) 
+//         )
+//         console.log(currentRecipes);
+//     })
+    
+//     updateUstensils()
+//     addTagUstensils()
+//     displayRecipeCards();
+//     console.log(currentRecipes);
+// }
 
