@@ -8,6 +8,7 @@ const detectSearchInput = () => {
     }
     else{
         currentRecipes = recipes;
+        tagUpdate();
         displayRecipeCards();
         updateIngredients();
     }
@@ -33,7 +34,7 @@ const searchFilter = () => {
       )
   );
   updateIngredients()
-
+  tagUpdate();
   displayRecipeCards()
 };
 
