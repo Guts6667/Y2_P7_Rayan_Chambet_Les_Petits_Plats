@@ -373,6 +373,30 @@ article .fa-clock {
   font-size: 16px;
 }
 
+.errorMsg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  font-style: italic;
+  color: white;
+  background: #798897;
+  padding: 5%;
+  border-radius: 5px;
+}
+
+.errorMsg .fas {
+  margin-bottom: 30%;
+  font-size: 40px;
+}
+
 /* Create "tagged" class */
 @media (max-width: 991px) {
   article {

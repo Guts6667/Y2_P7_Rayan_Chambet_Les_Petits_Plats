@@ -28,7 +28,7 @@
          <!-- Tags Ingrédients -->
         <div class="bg-blue component-filter">
             <div class="filterClosed">
-                <input type="text" name= "ingredientSearchbar" id="ingredientSearchbar" placeholder="Ingrédients" class="searchbarTags">
+                <input type="text" name= "ingredientSearchbar" id="ingredientSearchbar" placeholder="Ingrédients" class="searchbarTags" >
                 <div>
                     <i class="fas fa-chevron-up pointer" id="arrowUpIngredients"></i>
                     <i class="fas fa-chevron-down hidden pointer" id="arrowDownIngredients"></i>
@@ -75,6 +75,16 @@
     <main class="container container__recipes">
      <!-- Display Cards Recipes here  -->
     </main>
+    <div class="hidden errorMsg container">
+        <div>
+            <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div>
+            <span>
+                Aucune recette ne correspond à votre critère... vous pouvez chercher « tarte aux pommes », « poisson », etc..
+            </span>
+        </div>
+     </div>
     <script src="./datas/recipes.js"></script>
     <script src="./script/utils/var.js"></script>
     <script src="./script/Models/Recipe.js"></script>
@@ -88,5 +98,6 @@
     <script src="./script/utils/tagAppliance.js"></script>
     <script src="./script/utils/tagUstensil.js"></script>
     <script src="./script/utils/tagUpdate.js"></script>
+    <script src="./script/utils/noResult.js"></script>
 </body>
 </html>

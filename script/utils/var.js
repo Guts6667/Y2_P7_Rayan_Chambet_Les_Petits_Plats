@@ -8,6 +8,7 @@ let arrowUpIngredients = document.querySelector('#arrowUpIngredients');
 let arrowDownIngredients = document.querySelector('#arrowDownIngredients');
 const ingredientSearchbar = document.querySelector('#ingredientSearchbar')
 
+let errorMsg = document.querySelector('.errorMsg');
 // Appliances
 let asideAppliances = document.querySelector('#asideAppliances');
 let arrowUpAppliances = document.querySelector('#arrowUpAppliances');

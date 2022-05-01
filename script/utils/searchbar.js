@@ -33,6 +33,7 @@ const searchFilter = () => {
           .includes(searchbar.value.toLowerCase())
       )
   );
+ 
   updateIngredients()
   tagUpdate();
   displayRecipeCards()
