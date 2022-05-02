@@ -19,25 +19,24 @@ const detectSearchInput = () => {
 // -----------------------------------------------------------------------------------------------------
 // Filter when typing in searchbar (Utiliser filter pour trouver TOUTES les valeurs correspondantes)
 
-
 const searchFilter = () => {
-  currentRecipes = [];
-
-for(let i= 0;  i < recipes.length; i++){
-    if(recipes[i].name.toLowerCase().includes(searchbar.value.toLowerCase()) || 
-    recipes[i].description.toLowerCase().includes(searchbar.value.toLowerCase()) ||
-          recipes[i].ingredients.some((ingredient) =>
-            ingredient.ingredient
-              .toLowerCase()
-              .includes(searchbar.value.toLowerCase()))){
-                  currentRecipes.push(recipes[i]);
-              }
-}
- 
-  updateIngredients()
-  tagUpdate();
-  displayRecipeCards()
-};
+  currentRecipes = recipes.filter(
+     (recipe) =>
+       recipe.name.toLowerCase().includes(searchbar.value.toLowerCase()) ||
+       recipe.description
+         .toLowerCase()
+         .includes(searchbar.value.toLowerCase()) ||
+       recipe.ingredients.some((ingredient) =>
+         ingredient.ingredient
+           .toLowerCase()
+           .includes(searchbar.value.toLowerCase())
+       )
+   );
+  
+   updateIngredients()
+   tagUpdate();
+   displayRecipeCards()
+ };
 
 // -----------------------------------------------------------------------------------------------------
 const searchbarFunc = () => {
