@@ -17,7 +17,8 @@ const detectSearchInput = () => {
 };
 
 // -----------------------------------------------------------------------------------------------------
-// Filter when typing in searchbar (Utiliser filter pour trouver TOUTES les valeurs correspondantes)
+// Algorithme #2
+// Second version of the filtering function through the main searchbar
 
 
 const searchFilter = () => {
@@ -38,8 +39,8 @@ for(let i= 0;  i < recipes.length; i++){
   tagUpdate();
   displayRecipeCards()
 };
-
 // -----------------------------------------------------------------------------------------------------
+
 const searchbarFunc = () => {
   detectSearchInput();
 };
