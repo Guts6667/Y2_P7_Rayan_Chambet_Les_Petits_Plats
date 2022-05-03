@@ -43,25 +43,28 @@ const detectSearchInput = () => {
 // Empty currentRecipes[] then uses a for loop and a forEach loop to check every values of the array.
 // If one of the object's value matches the search bar's value, it pushes the recipes in currentRecipes[]
 // Algo 2
-const searchFilter = () => {
+ const searchFilter = () => {
 
   currentRecipes = [];
   for(let i = 0; i < recipes.length; i++){
-
-    if(recipes[i].name.toLowerCase().includes(searchbar.value.toLowerCase()) ||
-      recipes[i].description.toLowerCase().includes(searchbar.value.toLowerCase()) ||
-      recipes[i].ingredients.forEach(ingredient => { ingredient.ingredient.toLowerCase().includes(searchbar.value.toLowerCase())
-          currentRecipes.push(recipes[i])
-      })
+    let recipesName = recipes[i].name.toLowerCase().includes(searchbar.value.toLowerCase());
+    let recipesDescription = recipes[i].description.toLowerCase().includes(searchbar.value.toLowerCase());
+    let recipesIngredient = false;
     
-    );
+    for(let j = 0; j < recipes[i].ingredients.length; j++){
+      if(recipes[i].ingredients[j].ingredient.toLowerCase().includes(searchbar.value.toLowerCase())){
+          recipesIngredient = true;
+        }
+    }
+    if(recipesName || recipesDescription|| recipesIngredient){
+      currentRecipes.push(recipes[i]);
+    }
   }
   
    updateIngredients()
    tagUpdate();
    displayRecipeCards()
  };
-
 
  
 
